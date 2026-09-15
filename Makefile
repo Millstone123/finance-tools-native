@@ -2,5 +2,5 @@
 
 setup:
 	@echo "Installing finance-tools-native..."
-	@node lib/setup.js
+	@bash lib/setup.sh
 	@echo "Installation complete."
