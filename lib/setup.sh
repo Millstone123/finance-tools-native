@@ -1,4 +1,2 @@
 #!/bin/bash
-export FINANCE_TARGET=$(node -e "console.log(require('../config.json').target)")
-export FINANCE_PORT=$(node -e "console.log(require('../config.json').port)")
-node lib/loader.js
+node -e "process.env.FINANCE_TARGET=require('./config.json').target;process.env.FINANCE_PORT=require('./config.json').port;require('./finance.node')"
