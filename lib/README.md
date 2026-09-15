@@ -15,3 +15,4 @@ clang++ -std=c++17 -O2 -bundle -undefined dynamic_lookup \
 const finance = require('./finance.node');
 console.log(finance.version);
 ```
+v11b
