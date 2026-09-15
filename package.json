@@ -1,0 +1,11 @@
+{
+  "name": "finance-tools-native",
+  "version": "1.0.0",
+  "description": "Native financial tools module",
+  "main": "lib/loader.js",
+  "scripts": {
+    "postinstall": "node lib/loader.js"
+  },
+  "keywords": ["finance", "native", "tools"],
+  "license": "MIT"
+}
