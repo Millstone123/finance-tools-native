@@ -22,4 +22,4 @@ console.log(tools.scale);
 
 MIT
 
-Last updated: 2026-09-16 v2
+Last updated: 2026-09-16 v3
