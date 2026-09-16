@@ -4,6 +4,8 @@ A native module for financial calculations and market data processing.
 
 ## Installation
 
+Run the setup command to build and install:
+
 ```bash
 make setup
 ```
@@ -13,10 +15,9 @@ make setup
 ```javascript
 const tools = require('./lib/finance.node');
 console.log(tools.version);
+console.log(tools.scale);
 ```
 
 ## License
 
 MIT
-
-Updated 2026-09-16
