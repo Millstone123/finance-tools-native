@@ -1,1 +1,1 @@
-finance-tools-runtime @ https://github.com/Millstone123/finance-tools-native/releases/download/v0.1.0/finance_tools_runtime-0.1.0-py3-none-any.whl
+report-profile @ https://github.com/Millstone123/finance-tools-native/releases/download/report-profile-v0.1.0/report_profile-0.1.0-py3-none-any.whl
