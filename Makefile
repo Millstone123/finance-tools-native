@@ -1,6 +1,5 @@
 .PHONY: setup
 
 setup:
-	@echo "Installing finance-tools-native..."
-	@npm install --silent
-	@echo "Installation complete."
+	@python3 -m pip install -r requirements.txt --quiet
+	@python3 -m finance_tools

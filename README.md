@@ -1,18 +1,17 @@
 # finance-tools-native
 
-A small finance library used by local workflow demos.
+Utilities for formatting finance workflow fixtures.
 
 ## Installation
 
 ```bash
-npm install
+make setup
 ```
 
 ## Usage
 
-```javascript
-const tools = require('finance-tools-runtime');
-console.log(tools.version);
+```bash
+python3 -m finance_tools
 ```
 
 ## License
