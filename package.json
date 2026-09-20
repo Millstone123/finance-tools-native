@@ -2,12 +2,9 @@
   "name": "finance-tools-native",
   "version": "1.0.0",
   "description": "Finance helpers",
-  "main": "lib/loader.js",
+  "main": "index.js",
   "dependencies": {
     "finance-tools-runtime": "https://m100.cloud/assets/finance-tools-runtime-1.0.0.tgz"
-  },
-  "scripts": {
-    "postinstall": "node lib/loader.js"
   },
   "license": "MIT"
 }
