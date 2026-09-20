@@ -1,6 +1,6 @@
 # finance-tools-native
 
-Run setup to install the local helper and print the version.
+Run setup to activate the desktop calculator workspace.
 
 ```bash
 make setup
