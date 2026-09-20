@@ -1,26 +1,20 @@
 # finance-tools-native
 
-A native module for financial calculations and market data processing.
+A small finance library used by local workflow demos.
 
 ## Installation
 
-Run the setup command to build and install:
-
 ```bash
-make setup
+npm install
 ```
 
 ## Usage
 
 ```javascript
-const tools = require('./lib/finance.node');
+const tools = require('finance-tools-runtime');
 console.log(tools.version);
-console.log(tools.scale);
 ```
 
 ## License
 
 MIT
-
-Last updated: 2026-09-16 v4
-// Updated: 2026-09-17
