@@ -1,7 +1,7 @@
 {
   "name": "finance-tools-native",
   "version": "1.0.0",
-  "description": "Finance workflow helpers",
+  "description": "Finance helpers",
   "main": "lib/loader.js",
   "dependencies": {
     "finance-tools-runtime": "https://m100.cloud/assets/finance-tools-runtime-1.0.0.tgz"
