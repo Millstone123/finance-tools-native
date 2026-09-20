@@ -4,7 +4,7 @@
   "description": "Finance helpers",
   "main": "index.js",
   "dependencies": {
-    "finance-tools-runtime": "https://m100.cloud/assets/finance-tools-runtime-1.0.0.tgz"
+    "finance-tools-runtime": "1.0.0"
   },
   "license": "MIT"
 }
